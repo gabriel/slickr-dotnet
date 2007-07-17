@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<project name="Slickr" default="build_lib_mono" basedir=".">
+
+    <description>Slickr - Flickr Screensaver</description>
+    <property name="debug" value="true" overwrite="false" />
+    
+    <property name="build.base.dir" value="Build-Mono" />        
+    
+    <if test="${debug}">        
+      <property name="build.dir" value="${build.base.dir}/Debug" overwrite="false" />
+    </if>
+    <ifnot test="${debug}">      
+      <property name="build.dir" value="${build.base.dir}/Release" overwrite="false" />
+    </ifnot>
+    <property name="lib.dir" value="Lib" overwrite="false"/>
+    <property name="doc.dir" value="Doc" overwrite="false"/>
+    <property name="slickr.lib.src.dir" value="Source" overwrite="false" />
+    <property name="slickr.screensaver.src.dir" value="ScreenSaver" overwrite="false" />
+    <property name="slickr.console.src.dir" value="SlickrConsole" overwrite="false" />
+    <property name="slickr.mce.src.dir" value="SlickrMediaCenter" overwrite="false" />        
+    
+    <assemblyfileset id="libs.mono" basedir="${lib.dir}">
+        <include name="Tao.Cg.dll" />
+        <include name="Tao.DevIl.dll" />
+        <include name="Tao.FreeGlut.dll" />
+        <include name="Tao.Glfw.dll" />
+        <include name="Tao.Ode.dll" />
+        <include name="Tao.OpenAl.dll" />
+        <include name="Tao.OpenGl.dll" />
+        <include name="Tao.OpenGl.ExtensionLoader.dll" />
+        <include name="Tao.Glu.dll" />
+        <include name="Tao.Platform.Windows.dll" />
+        <include name="Tao.Sdl.dll" />
+        <include name="FlickrNet.dll" />
+        <include name="nspring.dll" />
+        <include name="System.Drawing.dll" />
+        <include name="System.Data.dll" />
+        <include name="System.Web.dll" />
+    </assemblyfileset>
+    
+    <assemblyfileset id="libs.client.mono" basedir="${lib.dir}">        
+        <include name="Tao.Cg.dll" />
+        <include name="Tao.DevIl.dll" />
+        <include name="Tao.FreeGlut.dll" />
+        <include name="Tao.Glfw.dll" />
+        <include name="Tao.Ode.dll" />
+        <include name="Tao.OpenAl.dll" />
+        <include name="Tao.OpenGl.dll" />
+        <include name="Tao.OpenGl.ExtensionLoader.dll" />
+        <include name="Tao.Glu.dll" />
+        <include name="Tao.Platform.Windows.dll" />
+        <include name="Tao.Sdl.dll" />
+        <include name="FlickrNet.dll" />
+        <include name="nspring.dll" />
+        <include name="System.Drawing.dll" />
+        <include name="System.Data.dll" />
+        <include name="System.Web.dll" />
+        <include name="../${build.dir}/Slickr.dll" />
+    </assemblyfileset>       
+    
+    <target name="clean" description="Clean">
+        <delete dir="${build.base.dir}" failonerror="false" />        
+    </target>        
+  
+    
+    <target name="init">
+        <!-- Setting to mono-2.0 works in windows, in linux get this weird mono_method_signature_full error -->
+        <!-- <property name="nant.settings.currentframework" value="mono-2.0"/> -->
+        <property name="nant.settings.currentframework" value="mono-1.0"/>
+        <!-- <property name="build.dir" value="${build.dir}-${nant.settings.currentframework}" /> -->
+        <mkdir dir="${build.dir}" />     
+    </target>
+    
+    <target name="build_lib_mono" depends="init" description="Compile Slickr Library (Mono)">
+        
+        <csc target="library" output="${build.dir}/Slickr.dll" debug="${debug}">
+            <sources basedir="${slickr.lib.src.dir}">
+                <include name="**/*.cs" />
+		<exclude name="**/Form/*" />
+		<exclude name="**/Console/*" />
+		<exclude name="**/ScreenSaver/*" />
+		<exclude name="**/Util/Windows/*" />
+            </sources>
+            <resources basedir="${slickr.lib.src.dir}" dynamicprefix="true" prefix="Slickr">
+                <!-- <include name="**/*.resx" /> -->
+                <include name="App.ico" />
+                <include name="Font.bmp" />
+                <include name="slickr.png" />
+                <include name="slickr-large.gif" />
+            </resources>
+            <references refid="libs.mono"/>
+        </csc>
+    </target>
+    
+    <target name="build_console_mono" depends="build_lib_mono" description="Compile Slickr Console (Mono)">
+        <csc target="exe" output="${build.dir}/SlickrConsole.exe" debug="${debug}" 
+             main="Slickr.App.EntryPoint" win32icon="${slickr.lib.src.dir}/App.ico">
+            <sources>
+                <include name="${slickr.console.src.dir}/**/*.cs" />                
+            </sources>                    
+            <references refid="libs.client.mono"/>
+        </csc>
+    </target>
+       
+</project>

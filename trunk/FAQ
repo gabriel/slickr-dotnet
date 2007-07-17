@@ -1,0 +1,21 @@
+<h1>Faq: Slickr</h1>
+<p><strong>Its very slow at fading/zooming/panning.</strong></p>
+
+<p>You should try installing the latest drivers for your video card. This should install the OpenGL functionality that the program requires.</p>
+<p>Windows XP may not provide 3D support with its own drivers for your product. You may need to download a driver directly from the card or chipset manufacturer.</p>
+<ul>
+<li><a target="_blank" href="http://www.voodoofiles.com/3dfxhelp.asp">Get the latest drivers from 3Dfx</a></li>
+<li><a target="_blank" href="http://www.3dlabs.com/">Get the latest drivers from 3DLabs</a></li>
+<li><a target="_blank" href="http://www.ati.com/">Get the latest drivers from ATI</a></li>
+<li><a target="_blank" href="http://www.intel.com/">Get the latest drivers from Intel</a></li>
+<li><a target="_blank" href="http://www.matrox.com/">Get the latest drivers from Matrox</a></li>
+<li><a target="_blank" href="http://www.techadvice.com/support/n/nine/nine-main.htm">Get the latest drivers from Number Nine</a></li>
+
+<li><a target="_blank" href="http://www.nvidia.com/">Get the latest drivers from NVIDIA</a></li>
+<li><a target="_blank" href="http://www.rendition.com/">Get the latest drivers from Rendition</a></li>
+<li><a target="_blank" href="http://www.s3graphics.com/">Get the latest drivers from S3</a> or <a target="_blank" href="http://www.diamondmm.com/">Diamond Multimedia</a></li>
+<li><a target="_blank" href="http://www.tridentmicro.com/">Get the latest drivers from Trident Microsystems</a></li>
+</ul>
+<p><strong>The images appear to be low resolution or low color depth (8-bit).</strong></p>
+<p>This is a known issue that I am working on. It likely has to do with OpenGL support for your graphics card. I was able to reproduce it on a friends laptop so I am currently looking for a fix.
+</p>

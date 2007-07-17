@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="3.5" modules="professional" RootPath="." Language="en">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install &lt;product name&gt;." ValueLocId="*"/>
+    <ROW Property="BannerBitmap" Value="style2blue_banner.jpg"/>
+    <ROW Property="DialogBitmap" Value="style2blue_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="Cellar Door Software" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{8F0190AB-D147-4FE3-A30B-F5FF35610695} "/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Slickr" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.24"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{3C99DC11-3E8C-4B72-AA50-401513AC0E6C}"/>
+    <ROW Property="WindowsFamily9X" Value="Windows 9x/ME"/>
+    <ROW Property="WindowsTypeNT" Value="Windows 2000"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR" IsPseudoRoot="1"/>
+    <ROW Directory="New_Folder_DIR" Directory_Parent="ProgramMenuFolder" DefaultDir="Slickr"/>
+    <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="Progra~1|ProgramMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SystemFolder" Directory_Parent="TARGETDIR" DefaultDir="System~1|SystemFolder" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="WindowsFolder" Directory_Parent="TARGETDIR" DefaultDir="Window~1|WindowsFolder" IsPseudoRoot="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="DevIL.dll" ComponentId="{AA408C7E-B850-467E-9DB0-AAAD9D664D7C}" Directory_="WindowsFolder" Attributes="0" KeyPath="DevIL.dll" FullKeyPath="WindowsFolder\DevIL.dll"/>
+    <ROW Component="FlickrNet.dll" ComponentId="{A9DBF40E-A3F9-43C9-9E2F-12D6B93560E5}" Directory_="WindowsFolder" Attributes="0" KeyPath="FlickrNet.dll" FullKeyPath="WindowsFolder\FlickrNet.dll"/>
+    <ROW Component="FlickrNet.dll_1" ComponentId="{5E596E49-F154-42E3-AB53-507623E4E2D0}" Directory_="APPDIR" Attributes="0" KeyPath="FlickrNet.dll_1" FullKeyPath="APPDIR\FlickrNet.dll"/>
+    <ROW Component="ILU.dll" ComponentId="{62B7CE26-4746-479C-9040-3944056B18FB}" Directory_="WindowsFolder" Attributes="0" KeyPath="ILU.dll" FullKeyPath="WindowsFolder\ILU.dll"/>
+    <ROW Component="ILUT.dll" ComponentId="{00428804-427C-49BA-B07E-BB270E0A222E}" Directory_="WindowsFolder" Attributes="0" KeyPath="ILUT.dll" FullKeyPath="WindowsFolder\ILUT.dll"/>
+    <ROW Component="Slickr.cmd" ComponentId="{97B43813-8308-4317-8ED0-AB578643AE8D}" Directory_="APPDIR" Attributes="0" KeyPath="Slickr.cmd" FullKeyPath="APPDIR"/>
+    <ROW Component="Slickr.dll" ComponentId="{E727CC66-BEC5-4CB9-9D9A-745E775B2C97}" Directory_="WindowsFolder" Attributes="0" KeyPath="Slickr.dll" FullKeyPath="WindowsFolder\Slickr.dll"/>
+    <ROW Component="Slickr.dll_1" ComponentId="{DF54DA01-B525-45EF-905D-E08AB98F2636}" Directory_="APPDIR" Attributes="0" KeyPath="Slickr.dll_1" FullKeyPath="APPDIR\Slickr.dll"/>
+    <ROW Component="Slickr.scr" ComponentId="{339990B3-9B42-49C5-AE35-DD17971FCFF9}" Directory_="WindowsFolder" Attributes="0" KeyPath="Slickr.scr" FullKeyPath="WindowsFolder"/>
+    <ROW Component="SlickrConsole.exe" ComponentId="{3D6AF114-AD33-4C13-A2B2-7573E5DD49BF}" Directory_="APPDIR" Attributes="0" KeyPath="SlickrConsole.exe" FullKeyPath="APPDIR\SlickrConsole.exe"/>
+    <ROW Component="Tao.Cg.dll" ComponentId="{FD3F3D1B-E2F7-4805-8C52-552150B50382}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.Cg.dll" FullKeyPath="WindowsFolder\Tao.Cg.dll"/>
+    <ROW Component="Tao.Cg.dll_1" ComponentId="{4087119B-2263-43F4-9FE2-B50DBDAF3ACC}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.Cg.dll_1" FullKeyPath="APPDIR\Tao.Cg.dll"/>
+    <ROW Component="Tao.DevIl.dll" ComponentId="{A9FC86FD-9045-45DC-94A0-09C77A77E43E}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.DevIl.dll" FullKeyPath="WindowsFolder\Tao.DevIl.dll"/>
+    <ROW Component="Tao.DevIl.dll_1" ComponentId="{1A7AE3FA-5445-41B2-B995-F2F0AE016C0D}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.DevIl.dll_1" FullKeyPath="APPDIR\Tao.DevIl.dll"/>
+    <ROW Component="Tao.FreeGlut.dll" ComponentId="{053319F5-42CB-4DF5-A740-4FC896CDBA51}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.FreeGlut.dll" FullKeyPath="WindowsFolder\Tao.FreeGlut.dll"/>
+    <ROW Component="Tao.FreeGlut.dll_1" ComponentId="{C75DA70D-9333-4A85-95B2-7EBA6725C0A2}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.FreeGlut.dll_1" FullKeyPath="APPDIR\Tao.FreeGlut.dll"/>
+    <ROW Component="Tao.Glfw.dll" ComponentId="{2062C833-E2E5-4290-B25A-B62C93F1D369}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.Glfw.dll" FullKeyPath="WindowsFolder\Tao.Glfw.dll"/>
+    <ROW Component="Tao.Glfw.dll_1" ComponentId="{8D80F6BB-5B87-449A-9438-4FBE17A304AE}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.Glfw.dll_1" FullKeyPath="APPDIR\Tao.Glfw.dll"/>
+    <ROW Component="Tao.Ode.dll" ComponentId="{2E3469A2-62FF-43FD-9AAC-845B92DF0C47}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.Ode.dll" FullKeyPath="WindowsFolder\Tao.Ode.dll"/>
+    <ROW Component="Tao.Ode.dll_1" ComponentId="{7EF4EF32-0CD2-4122-B780-EFDC0F494D23}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.Ode.dll_1" FullKeyPath="APPDIR\Tao.Ode.dll"/>
+    <ROW Component="Tao.OpenAl.dll" ComponentId="{262AD759-CC45-4C9E-ACCB-20B5193A6C07}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.OpenAl.dll" FullKeyPath="WindowsFolder\Tao.OpenAl.dll"/>
+    <ROW Component="Tao.OpenAl.dll_1" ComponentId="{23C94DBA-17A9-43F4-A4F8-3640CBD01CF8}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.OpenAl.dll_1" FullKeyPath="APPDIR\Tao.OpenAl.dll"/>
+    <ROW Component="Tao.OpenGl.ExtensionLoader.dll" ComponentId="{61DA72D0-2159-402D-93A6-C9E40DDC011C}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.OpenGl.ExtensionLoader.dll" FullKeyPath="WindowsFolder\Tao.OpenGl.ExtensionLoader.dll"/>
+    <ROW Component="Tao.OpenGl.ExtensionLoader.dll_1" ComponentId="{4C13100C-A71A-40D2-A765-97BA63E2A0EB}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.OpenGl.ExtensionLoader.dll_1" FullKeyPath="APPDIR\Tao.OpenGl.ExtensionLoader.dll"/>
+    <ROW Component="Tao.OpenGl.Glu.dll" ComponentId="{C4602ECF-04AB-4CB3-90FB-4A4324C5ACC7}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.OpenGl.Glu.dll" FullKeyPath="WindowsFolder\Tao.OpenGl.Glu.dll"/>
+    <ROW Component="Tao.OpenGl.Glu.dll_1" ComponentId="{36DB60DA-D209-4430-B804-D3A54A3774B7}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.OpenGl.Glu.dll_1" FullKeyPath="APPDIR\Tao.OpenGl.Glu.dll"/>
+    <ROW Component="Tao.OpenGl.dll" ComponentId="{B07CCC89-C3CB-44D0-A110-9E20213B0F71}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.OpenGl.dll" FullKeyPath="WindowsFolder\Tao.OpenGl.dll"/>
+    <ROW Component="Tao.OpenGl.dll_1" ComponentId="{98480F2B-20D2-436A-9FAE-8E6455A1BC32}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.OpenGl.dll_1" FullKeyPath="APPDIR\Tao.OpenGl.dll"/>
+    <ROW Component="Tao.Platform.Windows.dll" ComponentId="{60A94329-AE4D-42A1-833A-59C18BFE79F9}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.Platform.Windows.dll" FullKeyPath="WindowsFolder\Tao.Platform.Windows.dll"/>
+    <ROW Component="Tao.Platform.Windows.dll_1" ComponentId="{14FD160C-B27D-4839-906A-ABF1F8A587DC}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.Platform.Windows.dll_1" FullKeyPath="APPDIR\Tao.Platform.Windows.dll"/>
+    <ROW Component="Tao.Sdl.dll" ComponentId="{36B2E806-2CE1-4F77-8AF2-DE39DCC06871}" Directory_="WindowsFolder" Attributes="0" KeyPath="Tao.Sdl.dll" FullKeyPath="WindowsFolder\Tao.Sdl.dll"/>
+    <ROW Component="Tao.Sdl.dll_1" ComponentId="{F3C7D917-36D8-4442-9FC4-5C78CF30C459}" Directory_="APPDIR" Attributes="0" KeyPath="Tao.Sdl.dll_1" FullKeyPath="APPDIR\Tao.Sdl.dll"/>
+    <ROW Component="freeglut.dll" ComponentId="{7D1ACAE0-CF53-4287-AFA6-28E467E6FF9E}" Directory_="WindowsFolder" Attributes="0" KeyPath="freeglut.dll" FullKeyPath="WindowsFolder\freeglut.dll"/>
+    <ROW Component="nspring.dll" ComponentId="{CE16CD59-7B1F-4C5E-B655-D0EBE6205EDA}" Directory_="WindowsFolder" Attributes="0" KeyPath="nspring.dll" FullKeyPath="WindowsFolder\nspring.dll"/>
+    <ROW Component="nspring.dll_1" ComponentId="{5656F53E-F22C-435B-B856-A1AD20731D09}" Directory_="APPDIR" Attributes="0" KeyPath="nspring.dll_1" FullKeyPath="APPDIR\nspring.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="nspring.dll Slickr.scr Tao.Cg.dll Tao.DevIl.dll Tao.FreeGlut.dll Tao.Glfw.dll Tao.Ode.dll Tao.OpenAl.dll Tao.OpenGl.dll Tao.OpenGl.ExtensionLoader.dll Tao.OpenGl.Glu.dll Tao.Platform.Windows.dll Tao.Sdl.dll DevIL.dll FlickrNet.dll freeglut.dll ILU.dll ILUT.dll Slickr.dll SlickrConsole.exe Tao.Sdl.dll_1 nspring.dll_1 Slickr.dll_1 Tao.Cg.dll_1 Tao.DevIl.dll_1 Tao.FreeGlut.dll_1 Tao.Glfw.dll_1 Tao.Ode.dll_1 Tao.OpenAl.dll_1 Tao.OpenGl.dll_1 Tao.OpenGl.ExtensionLoader.dll_1 Tao.OpenGl.Glu.dll_1 Tao.Platform.Windows.dll_1 FlickrNet.dll_1 Slickr.cmd"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="DevIL.dll" Component_="DevIL.dll" FileName="DevIL.dll" Attributes="0" SourcePath="Dist\DevIL.dll" SelfReg="false" Sequence="14"/>
+    <ROW File="FlickrNet.dll" Component_="FlickrNet.dll" FileName="Flickr~1.dll|FlickrNet.dll" Attributes="0" SourcePath="Dist\FlickrNet.dll" SelfReg="false" Sequence="15"/>
+    <ROW File="FlickrNet.dll_1" Component_="FlickrNet.dll_1" FileName="Flickr~1.dll|FlickrNet.dll" Attributes="0" SourcePath="Dist\FlickrNet.dll" SelfReg="false" Sequence="34"/>
+    <ROW File="ILU.dll" Component_="ILU.dll" FileName="ILU.dll" Attributes="0" SourcePath="Dist\ILU.dll" SelfReg="false" Sequence="17"/>
+    <ROW File="ILUT.dll" Component_="ILUT.dll" FileName="ILUT.dll" Attributes="0" SourcePath="Dist\ILUT.dll" SelfReg="false" Sequence="18"/>
+    <ROW File="Slickr.cmd" Component_="Slickr.cmd" FileName="Slickr.cmd" Attributes="0" SourcePath="Dist\Slickr.cmd" SelfReg="false" Sequence="35"/>
+    <ROW File="Slickr.dll" Component_="Slickr.dll" FileName="Slickr.dll" Attributes="0" SourcePath="Dist\Slickr.dll" SelfReg="false" Sequence="19"/>
+    <ROW File="Slickr.dll_1" Component_="Slickr.dll_1" FileName="Slickr.dll" Attributes="0" SourcePath="Dist\Slickr.dll" SelfReg="false" Sequence="23"/>
+    <ROW File="Slickr.scr" Component_="Slickr.scr" FileName="Slickr.scr" Attributes="0" SourcePath="Dist\Slickr.scr" SelfReg="false" Sequence="2"/>
+    <ROW File="SlickrConsole.exe" Component_="SlickrConsole.exe" FileName="Slickr~1.exe|SlickrConsole.exe" Attributes="0" SourcePath="Dist\SlickrConsole.exe" SelfReg="false" Sequence="20"/>
+    <ROW File="Tao.Cg.dll" Component_="Tao.Cg.dll" FileName="TaoCg~1.dll|Tao.Cg.dll" Attributes="0" SourcePath="Dist\Tao.Cg.dll" SelfReg="false" Sequence="3"/>
+    <ROW File="Tao.Cg.dll_1" Component_="Tao.Cg.dll_1" FileName="TaoCg~1.dll|Tao.Cg.dll" Attributes="0" SourcePath="Dist\Tao.Cg.dll" SelfReg="false" Sequence="24"/>
+    <ROW File="Tao.DevIl.dll" Component_="Tao.DevIl.dll" FileName="TaoDev~1.dll|Tao.DevIl.dll" Attributes="0" SourcePath="Dist\Tao.DevIl.dll" SelfReg="false" Sequence="4"/>
+    <ROW File="Tao.DevIl.dll_1" Component_="Tao.DevIl.dll_1" FileName="TaoDev~1.dll|Tao.DevIl.dll" Attributes="0" SourcePath="Dist\Tao.DevIl.dll" SelfReg="false" Sequence="25"/>
+    <ROW File="Tao.FreeGlut.dll" Component_="Tao.FreeGlut.dll" FileName="TaoFre~1.dll|Tao.FreeGlut.dll" Attributes="0" SourcePath="Dist\Tao.FreeGlut.dll" SelfReg="false" Sequence="5"/>
+    <ROW File="Tao.FreeGlut.dll_1" Component_="Tao.FreeGlut.dll_1" FileName="TaoFre~1.dll|Tao.FreeGlut.dll" Attributes="0" SourcePath="Dist\Tao.FreeGlut.dll" SelfReg="false" Sequence="26"/>
+    <ROW File="Tao.Glfw.dll" Component_="Tao.Glfw.dll" FileName="TaoGlf~1.dll|Tao.Glfw.dll" Attributes="0" SourcePath="Dist\Tao.Glfw.dll" SelfReg="false" Sequence="6"/>
+    <ROW File="Tao.Glfw.dll_1" Component_="Tao.Glfw.dll_1" FileName="TaoGlf~1.dll|Tao.Glfw.dll" Attributes="0" SourcePath="Dist\Tao.Glfw.dll" SelfReg="false" Sequence="27"/>
+    <ROW File="Tao.Ode.dll" Component_="Tao.Ode.dll" FileName="TaoOde~1.dll|Tao.Ode.dll" Attributes="0" SourcePath="Dist\Tao.Ode.dll" SelfReg="false" Sequence="7"/>
+    <ROW File="Tao.Ode.dll_1" Component_="Tao.Ode.dll_1" FileName="TaoOde~1.dll|Tao.Ode.dll" Attributes="0" SourcePath="Dist\Tao.Ode.dll" SelfReg="false" Sequence="28"/>
+    <ROW File="Tao.OpenAl.dll" Component_="Tao.OpenAl.dll" FileName="TaoOpe~1.dll|Tao.OpenAl.dll" Attributes="0" SourcePath="Dist\Tao.OpenAl.dll" SelfReg="false" Sequence="8"/>
+    <ROW File="Tao.OpenAl.dll_1" Component_="Tao.OpenAl.dll_1" FileName="TaoOpe~1.dll|Tao.OpenAl.dll" Attributes="0" SourcePath="Dist\Tao.OpenAl.dll" SelfReg="false" Sequence="29"/>
+    <ROW File="Tao.OpenGl.ExtensionLoader.dll" Component_="Tao.OpenGl.ExtensionLoader.dll" FileName="TaoOpe~3.dll|Tao.OpenGl.ExtensionLoader.dll" Attributes="0" SourcePath="Dist\Tao.OpenGl.ExtensionLoader.dll" SelfReg="false" Sequence="10"/>
+    <ROW File="Tao.OpenGl.ExtensionLoader.dll_1" Component_="Tao.OpenGl.ExtensionLoader.dll_1" FileName="TaoOpe~3.dll|Tao.OpenGl.ExtensionLoader.dll" Attributes="0" SourcePath="Dist\Tao.OpenGl.ExtensionLoader.dll" SelfReg="false" Sequence="31"/>
+    <ROW File="Tao.OpenGl.Glu.dll" Component_="Tao.OpenGl.Glu.dll" FileName="TaoOpe~4.dll|Tao.OpenGl.Glu.dll" Attributes="0" SourcePath="Dist\Tao.OpenGl.Glu.dll" SelfReg="false" Sequence="11"/>
+    <ROW File="Tao.OpenGl.Glu.dll_1" Component_="Tao.OpenGl.Glu.dll_1" FileName="TaoOpe~4.dll|Tao.OpenGl.Glu.dll" Attributes="0" SourcePath="Dist\Tao.OpenGl.Glu.dll" SelfReg="false" Sequence="32"/>
+    <ROW File="Tao.OpenGl.dll" Component_="Tao.OpenGl.dll" FileName="TaoOpe~2.dll|Tao.OpenGl.dll" Attributes="0" SourcePath="Dist\Tao.OpenGl.dll" SelfReg="false" Sequence="9"/>
+    <ROW File="Tao.OpenGl.dll_1" Component_="Tao.OpenGl.dll_1" FileName="TaoOpe~2.dll|Tao.OpenGl.dll" Attributes="0" SourcePath="Dist\Tao.OpenGl.dll" SelfReg="false" Sequence="30"/>
+    <ROW File="Tao.Platform.Windows.dll" Component_="Tao.Platform.Windows.dll" FileName="TaoPla~1.dll|Tao.Platform.Windows.dll" Attributes="0" SourcePath="Dist\Tao.Platform.Windows.dll" SelfReg="false" Sequence="12"/>
+    <ROW File="Tao.Platform.Windows.dll_1" Component_="Tao.Platform.Windows.dll_1" FileName="TaoPla~1.dll|Tao.Platform.Windows.dll" Attributes="0" SourcePath="Dist\Tao.Platform.Windows.dll" SelfReg="false" Sequence="33"/>
+    <ROW File="Tao.Sdl.dll" Component_="Tao.Sdl.dll" FileName="TaoSdl~1.dll|Tao.Sdl.dll" Attributes="0" SourcePath="Dist\Tao.Sdl.dll" SelfReg="false" Sequence="13"/>
+    <ROW File="Tao.Sdl.dll_1" Component_="Tao.Sdl.dll_1" FileName="TaoSdl~1.dll|Tao.Sdl.dll" Attributes="0" SourcePath="Dist\Tao.Sdl.dll" SelfReg="false" Sequence="21"/>
+    <ROW File="freeglut.dll" Component_="freeglut.dll" FileName="freeglut.dll" Attributes="0" SourcePath="Dist\freeglut.dll" SelfReg="false" Sequence="16"/>
+    <ROW File="nspring.dll" Component_="nspring.dll" FileName="nspring.dll" Attributes="0" SourcePath="Dist\nspring.dll" SelfReg="false" Sequence="1"/>
+    <ROW File="nspring.dll_1" Component_="nspring.dll_1" FileName="nspring.dll" Attributes="0" SourcePath="Dist\nspring.dll" SelfReg="false" Sequence="22"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;ui.ail&gt;"/>
+    <ROW Path="&lt;ui_en.ail&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="style2blue_banner.jpg" SourcePath="&lt;style2blue-banner.jpg&gt;"/>
+    <ROW Name="style2blue_dialog.jpg" SourcePath="&lt;style2blue-dialog.jpg&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="APPDIR" Target="[APPDIR]"/>
+    <ROW Action="SystemFolder" Type="1762" Source="SystemFolder" Target="rundll32.exe desk.cpl,InstallScreenSaver Slickr.scr"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="Slickr.exe" SourcePath="SlickrConsole\App.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="SystemFolder" Condition="NOT Installed" Sequence="5969"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="Start" value="WelcomeDlg VerifyReadyDlg"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="Version9X OR  (VersionNT &gt;= 500 )" Description="[ProductName] can not be installed on systems earlier than [WindowsTypeNT]"/>
+    <ROW Condition="VersionNT" Description="[ProductName] can not be installed on [WindowsFamily9X]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="FirstMediaSize" value="0"/>
+    <ATTRIBUTE name="FirstMediaSizeUnit" value="0"/>
+    <ATTRIBUTE name="IconPath" value="Source\App.ico?0"/>
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="MediaSizeUnit" value="0"/>
+    <ATTRIBUTE name="Package" value="6"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Slickr_Console" Directory_="New_Folder_DIR" Name="Slickr~1|Slickr (Console)" Component_="SlickrConsole.exe" Target="[#SlickrConsole.exe]" Arguments="/Window" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Slickr_Screen_Saver" Directory_="New_Folder_DIR" Name="Slickr~4|Slickr (Screen Saver)" Component_="Slickr.cmd" Target="[#Slickr.cmd]" Hotkey="0" Icon_="Slickr.exe" IconIndex="0" ShowCmd="7" WkDir="APPDIR"/>
+    <ROW Shortcut="Slickr_Settings" Directory_="New_Folder_DIR" Name="Slickr~2|Slickr (Settings)" Component_="SlickrConsole.exe" Target="[#SlickrConsole.exe]" Arguments="/Config" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMax="ProductVersion" Attributes="1025"/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" Attributes="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW DisplayName=".NET Framework" SetupFileUrl="http://www.microsoft.com/downloads/details.aspx?FamilyID=262d25e3-f589-4842-8157-034d1e7cf3a3&amp;displaylang=en" Location="2" ExactSize="0" TargetOS="2" SearchType="0" SearchString="[SystemFolder]mscoree.dll" VerMin="1.1" Sequence="1"/>
+  </COMPONENT>
+</DOCUMENT>
