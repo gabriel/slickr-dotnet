@@ -1,0 +1,184 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{CCCFB994-98FF-4894-A571-945FAFDD12AE}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "SlickrAddIn"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "Slickr.MediaCenter"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "FlickrNet"
+                    AssemblyName = "FlickrNet"
+                    HintPath = "..\Lib\FlickrNet.dll"
+                />
+                <Reference
+                    Name = "Tao.Cg"
+                    AssemblyName = "Tao.Cg"
+                    HintPath = "..\Lib\Tao.Cg.dll"
+                />
+                <Reference
+                    Name = "Tao.DevIl"
+                    AssemblyName = "Tao.DevIl"
+                    HintPath = "..\Lib\Tao.DevIl.dll"
+                />
+                <Reference
+                    Name = "Tao.FreeGlut"
+                    AssemblyName = "Tao.FreeGlut"
+                    HintPath = "..\Lib\Tao.FreeGlut.dll"
+                />
+                <Reference
+                    Name = "Tao.Glfw"
+                    AssemblyName = "Tao.Glfw"
+                    HintPath = "..\Lib\Tao.Glfw.dll"
+                />
+                <Reference
+                    Name = "Tao.Ode"
+                    AssemblyName = "Tao.Ode"
+                    HintPath = "..\Lib\Tao.Ode.dll"
+                />
+                <Reference
+                    Name = "Tao.OpenAl"
+                    AssemblyName = "Tao.OpenAl"
+                    HintPath = "..\Lib\Tao.OpenAl.dll"
+                />
+                <Reference
+                    Name = "Tao.OpenGl"
+                    AssemblyName = "Tao.OpenGl"
+                    HintPath = "..\Lib\Tao.OpenGl.dll"
+                />
+                <Reference
+                    Name = "Tao.OpenGl.ExtensionLoader"
+                    AssemblyName = "Tao.OpenGl.ExtensionLoader"
+                    HintPath = "..\Lib\Tao.OpenGl.ExtensionLoader.dll"
+                />
+                <Reference
+                    Name = "Tao.OpenGl.Glu"
+                    AssemblyName = "Tao.OpenGl.Glu"
+                    HintPath = "..\Lib\Tao.OpenGl.Glu.dll"
+                />
+                <Reference
+                    Name = "Tao.Platform.Windows"
+                    AssemblyName = "Tao.Platform.Windows"
+                    HintPath = "..\Lib\Tao.Platform.Windows.dll"
+                />
+                <Reference
+                    Name = "Tao.Sdl"
+                    AssemblyName = "Tao.Sdl"
+                    HintPath = "..\Lib\Tao.Sdl.dll"
+                />
+                <Reference
+                    Name = "Slickr"
+                    Project = "{E69CCDEB-418E-4096-BBE6-646AE31538BA}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Microsoft.MediaCenter"
+                    AssemblyName = "Microsoft.MediaCenter"
+                    HintPath = "..\Lib\Windows\Microsoft.MediaCenter.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SlickrAddIn.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SlickrAddIn.mcl"
+                    BuildAction = "None"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

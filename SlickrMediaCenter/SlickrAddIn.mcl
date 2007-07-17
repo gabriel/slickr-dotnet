@@ -1,0 +1,5 @@
+<application title="Slickr" id="{CCA64374-182E-43d8-9F7A-6DBBC4AEA4F0}">
+    <entrypoint id="{CCA64374-182E-43d8-9F7A-6DBBC4AEA4F1}" addin="Slickr.MediaCenter.SlickrAddIn, SlickrAddIn,  Version=1.0.0.0, Culture=neutral, PublicKeyToken=3f5400170fea3cad, Custom=null" title="Slickr" description="Slickr - Flickr Slideshow" >
+        <category category="More Programs"/>
+    </entrypoint>
+</application>

@@ -1,0 +1,8 @@
+<namespaces>
+    <namespace name="Slickr">
+        The <b>Slickr</b> namespace is the main Slickr namespace.
+    </namespace>
+    <namespace name="CommonCode">
+        The <b>CommonCode</b> namespace defines common utility classes and functions.
+    </namespace>
+</namespaces>

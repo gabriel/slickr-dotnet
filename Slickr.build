@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<project name="Slickr" default="build" basedir=".">
+
+    <description>Slickr - Flickr Screensaver</description>
+    <property name="debug" value="true" overwrite="false" />
+    
+    <property name="build.base.dir" value="Build" />        
+    
+    <if test="${debug}">        
+      <property name="build.dir" value="${build.base.dir}/Debug" overwrite="false" />
+    </if>
+    <ifnot test="${debug}">      
+      <property name="build.dir" value="${build.base.dir}/Release" overwrite="false" />
+    </ifnot>
+    <property name="lib.dir" value="Lib" overwrite="false"/>
+    <property name="doc.dir" value="Doc" overwrite="false"/>
+    <property name="slickr.lib.src.dir" value="Source" overwrite="false" />
+    <property name="slickr.screensaver.src.dir" value="ScreenSaver" overwrite="false" />
+    <property name="slickr.console.src.dir" value="SlickrConsole" overwrite="false" />
+    <property name="slickr.mce.src.dir" value="SlickrMediaCenter" overwrite="false" />        
+    
+    <assemblyfileset id="libs" basedir="${lib.dir}">        
+        <include name="Tao.Cg.dll" />
+        <include name="Tao.DevIl.dll" />
+        <include name="Tao.FreeGlut.dll" />
+        <include name="Tao.Glfw.dll" />
+        <include name="Tao.Ode.dll" />
+        <include name="Tao.OpenAl.dll" />
+        <include name="Tao.OpenGl.dll" />
+        <include name="Tao.OpenGl.ExtensionLoader.dll" />
+        <include name="Tao.Glu.dll" />
+        <include name="Tao.Platform.Windows.dll" />
+        <include name="Tao.Sdl.dll" />
+        <include name="FlickrNet.dll" />
+        <include name="nspring.dll" />        
+    </assemblyfileset>    
+    
+    <assemblyfileset id="libs.client" basedir="${lib.dir}">        
+        <include name="Tao.Cg.dll" />
+        <include name="Tao.DevIl.dll" />
+        <include name="Tao.FreeGlut.dll" />
+        <include name="Tao.Glfw.dll" />
+        <include name="Tao.Ode.dll" />
+        <include name="Tao.OpenAl.dll" />
+        <include name="Tao.OpenGl.dll" />
+        <include name="Tao.OpenGl.ExtensionLoader.dll" />
+        <include name="Tao.Glu.dll" />
+        <include name="Tao.Platform.Windows.dll" />
+        <include name="Tao.Sdl.dll" />
+        <include name="FlickrNet.dll" />
+        <include name="nspring.dll" />
+        <include name="../${build.dir}/Slickr.dll" />
+    </assemblyfileset>
+    
+    <assemblyfileset id="libs.mce" basedir="${lib.dir}">
+        <include name="Tao.Cg.dll" />
+        <include name="Tao.DevIl.dll" />
+        <include name="Tao.FreeGlut.dll" />
+        <include name="Tao.Glfw.dll" />
+        <include name="Tao.Ode.dll" />
+        <include name="Tao.OpenAl.dll" />
+        <include name="Tao.OpenGl.dll" />
+        <include name="Tao.OpenGl.ExtensionLoader.dll" />
+        <include name="Tao.Glu.dll" />
+        <include name="Tao.Platform.Windows.dll" />
+        <include name="Tao.Sdl.dll" />
+        <include name="FlickrNet.dll" />
+        <include name="nspring.dll" />
+        <include name="../${build.dir}/Slickr.dll" />
+        <include name="Microsoft.MediaCenter.dll"/>
+    </assemblyfileset>
+    
+    <target name="clean" description="Clean">
+        <delete dir="${build.base.dir}" failonerror="false" />        
+    </target>        
+    
+    <target name="build_lib" description="Compile Slickr Library">
+        <property name="nant.settings.currentframework" value="net-1.1"/>
+        <mkdir dir="${build.dir}" />
+        <csc target="library" output="${build.dir}/Slickr.dll" debug="${debug}">
+            <sources basedir="${slickr.lib.src.dir}">
+                <include name="**/*.cs" />
+            </sources>
+            <resources basedir="${slickr.lib.src.dir}" dynamicprefix="true" prefix="Slickr">
+                <include name="**/*.resx" />
+                <include name="App.ico" />
+                <include name="Font.bmp" />
+                <include name="slickr.png" />
+                <include name="slickr-large.gif" />
+            </resources>
+            <references refid="libs"/>                     
+        </csc>
+    </target>
+    
+    <target name="build" depends="build_lib" description="Compile Slickr Screensaver">
+        <mkdir dir="${build.dir}" />
+        <csc target="winexe" output="${build.dir}/ScreenSaver.exe" debug="${debug}" 
+             main="Slickr.ScreenSaver.EntryPoint" win32icon="${slickr.lib.src.dir}/App.ico">
+            <sources basedir="${slickr.screensaver.src.dir}">
+                <include name="**/*.cs" />
+            </sources>     
+            <references refid="libs.client"/>
+        </csc>
+    </target>
+    
+    <target name="build_console" depends="build_lib" description="Compile Slickr Console">
+        <mkdir dir="${build.dir}" />
+        <csc target="winexe" output="${build.dir}/SlickrConsole.exe" debug="${debug}" 
+             main="Slickr.App.EntryPoint" win32icon="${slickr.lib.src.dir}/App.ico">
+            <sources basedir="${slickr.console.src.dir}">
+                <include name="**/*.cs" />
+            </sources>                    
+            <references refid="libs.client"/>
+        </csc>
+    </target>
+    
+    <target name="build_mce" description="Compile Slickr Media Center">
+        <echo message="Debug: ${debug}" /> 
+        <!-- <property name="nant.settings.currentframework" value="net-1.0"/> -->
+        <mkdir dir="${build.dir}" />
+        <csc target="library" output="${build.dir}/SlickrAddIn.dll" debug="${debug}" 
+             win32icon="${slickr.lib.src.dir}/App.ico">
+            <sources basedir="${slickr.mce.src.dir}">
+                <include name="**/*.cs" />
+            </sources>                    
+            <references refid="libs.mce"/>
+        </csc>
+    </target>        
+    
+    <target name="doc" depends="build_lib" description="Build documentation">
+        <ndoc>
+            <assemblies basedir="${build.dir}">
+                <include name="Slickr.dll" />                
+            </assemblies>
+            <summaries>
+                <include name="NamespaceSummary.xml" />
+            </summaries>
+            <referencepaths>
+                <include name="${lib.dir}"/>
+            </referencepaths>
+            <documenters>
+                <documenter name="MSDN">
+                  <property name="OutputDirectory" value="${doc.dir}\MSDN" />
+                  <property name="HtmlHelpName" value="slickr" />
+                  <property name="Title" value="Slickr SDK Reference" />
+                  <property name="ShowVisualBasic" value="True" />
+                  <property name="OutputTarget" value="Web" />
+                  <property name="SdkLinksOnWeb" value="True" />
+                  <property name="IncludeFavorites" value="True" />
+                  <property name="ShowMissingSummaries" value="True" />
+                  <property name="ShowMissingRemarks" value="True" />
+                  <property name="ShowMissingParams" value="True" />
+                  <property name="ShowMissingReturns" value="True" />
+                  <property name="ShowMissingValues" value="True" />
+                  <property name="AssemblyVersionInfo" value="AssemblyVersion" />
+                  <property name="CopyrightText" value="Copyright 2005-2006 Cellar Door Software." />
+                  <property name="CopyrightHref" value="http://cellardoorsw.com"/>
+                  <property name="Preliminary" value="True" />
+                  <property name="StaticMembersDefaultToSafe" value="False" />
+                  <property name="CleanIntermediates" value="True" />
+                </documenter>                
+            </documenters> 
+        </ndoc>
+    </target>
+</project>

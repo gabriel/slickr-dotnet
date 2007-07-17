@@ -1,0 +1,90 @@
+1.0.3
+- Added settings for application key (API key + Shared secret)
+- Added check for sane non-microsoft OpenGL vendor and renderer (can override in About 'Override OpenGL Check' box.
+- Added in error feedback and sticky status message. If api key is invalid (error code = 100), they query check is disabled for the current runtime.
+
+1.0.2
+- Updated API key. Removed API key an shared secret from source repository.
+- Test OpenGL button in the about box list open gl properties
+- Using maximum texture size from opengl system (had defaulted to 2048 in the past)
+- Lengthened the view ticker. After 120 minutes (2 hours) the ticker will go up by hours, up to 48
+- Slickr Console, added context menu (right click)
+- Slickr Console, full screen mode goes full screen over the task bar
+
+1.0.1
+- If pan disabled, then the image does not fill screen (i.e. is not cropped)
+- Slickr Console, very new and possibly buggy
+- Shortcuts to Screen saver, console, and settings via the start menu
+
+1.0
+- Added override proxy support
+- View time > 120 seconds, now moves up by minutes 119, 120 seconds -> 3, 4 minutes -> 1 hour
+- If connection error, then it will show cached images (instead of stopping on the current image)
+
+1.0 Beta 12
+- Added randomize option to user favorites and user all
+- Re-wrote the user contacts section
+- Settings are now read and saved in user's LocalSettings application directory
+ (Settings should automatically be moved).
+ This allows different users of the same computer to have their own preferences.
+- Shows owner of photo in status for Favorites, Contacts, Groups and Everyone modes (You should clear your cache, there is a 'Clear Cache' button in the About box).
+- Option to include the specified user when showing their contacts
+- Pushing 'D' will set your wallpaper to the current image
+- Pushing Space bar will open browser to current image
+- Added some basic caching for often used flickr queries 
+
+1.0 Beta 11
+- Turned off FlickrNet caching, causes everything to break if it gets interrupted at a bad time
+- On multiple monitors alternates between the two when queuing images (keeps the primary monitor from starving the others).
+
+1.0 Beta 10
+- Using Flickr.Net 2.0
+- Major refactoring. Put most stuff into a Slickr.dll, started work on slideshow app.
+- Major enhancements to lower CPU usage.
+- Various bug fixes :)
+
+1.0 Beta 9
+- Fixed interestingness search not resetting at last page
+- Added check for invalid settings file, and cause a reset instead of a crash
+- Checks the existence of an image before accessing flickr site
+- Added a 1 second pause between flickr api calls
+- Added debug info in the about box
+- Seperated out Slickr into a dll, starting a console app.
+
+1.0 Beta 8
+- Added Windows 2000 support
+- Added multi-monitor support
+- Local option now gets all photos in all sub-directories
+- Interestingness
+
+1.0 Beta 7
+- Fixed multi-monitor bug, am only doing primary screen again
+
+1.0 Beta 6
+- Fixing screen flicker issue
+- Cutting the zoom back by half
+
+1.0 Beta 5
+- Uses IE proxy if set
+- Added options to turn off fading, panning and zooming
+- Added option to turn off logo
+- Added maximum size and default it to large (that way super large original images don't slow it down)
+- Show file info, now shows the image name and not the wierd file path
+- Added check buttons for users and groups
+- Added any/all tag mode to the user and everyone tag fields
+- Fixed stale authorize issue (Having some weird issues here, still looking into it)
+- Added url box for when the authorize button doesn't launch a browser
+
+1.0 Beta 4
+- Fixed cache dir being set to local images dir
+
+1.0 Beta 3
+- Made .Net 1.1 compatible
+- Added authorization tab
+- Added local directory option
+- Changed flickr options layout
+- Added startup logo
+- Fixed randomness bug
+- Various bug fixes
+
+
