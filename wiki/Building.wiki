@@ -1,4 +1,4 @@
-#summary Overiew
+#summary About the project file layout, API key shared secrets, and libraries.
 
 = API Key & Shared secret =
 
