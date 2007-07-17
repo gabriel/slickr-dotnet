@@ -33,7 +33,7 @@ Update: This was changed to point to Settings.Local.ApiKey and Settings.Local.Sh
 
 == ChangeLog ==
 
-http://slickr-dotnet.googlecode.com/svn/trunk/ChangeLog
+  * http://slickr-dotnet.googlecode.com/svn/trunk/ChangeLog
 
 = Libraries =
   * Tao - TAO C# OpenGL libary http://www.taoframework.com/Home
