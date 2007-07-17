@@ -1,5 +1,5 @@
 #summary About the project file layout, API key shared secrets, and libraries.
-#labels Phase-Deploy
+#labels Phase-Deploy,Featured
 
 = API Key & Shared secret =
 
