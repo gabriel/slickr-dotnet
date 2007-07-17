@@ -15,7 +15,7 @@ Update: This was changed to point to Settings.Local.ApiKey and Settings.Local.Sh
 
 = Files =
 
-Source/ - Main source files for the library (Slickr.dll)<br/>
+Source/ - Main source files for the library (Slickr.dll)[[BR]]
 
 ScreenSaver/ - Source files for the screen saver
 
