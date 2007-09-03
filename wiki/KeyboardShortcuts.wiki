@@ -1,0 +1,4 @@
+#summary Keyboard shortcuts when the screensaver is running.
+
+  * D: Set your wallpaper to the current image
+  * Space bar: Open browser to current image
